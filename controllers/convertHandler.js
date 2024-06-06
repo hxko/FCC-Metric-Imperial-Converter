@@ -54,6 +54,8 @@ function ConvertHandler() {
   };
 
   this.spellOutUnit = function (unit) {
+    if (!unit) return "invalid unit"; // Check if unit is undefined
+
     const unitSpellOut = {
       'gal': 'gallons',
       'l': 'liters',
@@ -95,7 +97,7 @@ function ConvertHandler() {
         result = undefined;
     }
 
-    return result;
+    return result.toFixed(5);
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
@@ -103,7 +105,7 @@ function ConvertHandler() {
 
     const spelledOutInitUnit = this.spellOutUnit(initUnit);
     const spelledOutReturnUnit = this.spellOutUnit(returnUnit);
-    result = `${initNum} ${spelledOutInitUnit} converts to ${returnNum.toFixed(5)} ${spelledOutReturnUnit}`;
+    result = `${initNum} ${spelledOutInitUnit} converts to ${returnNum} ${spelledOutReturnUnit}`;
 
     return result;
   };
