@@ -1,7 +1,8 @@
 # Metric-Imperial Converter
 
-This project is part of the FreeCodeCamp - Quality Assurance Certification
-Tasks that needed to be accomplished below:
+This project is part of the FreeCodeCamp - Quality Assurance Certification.  
+Functional & Unit Tests with Chai Framework  
+
 
 ## Instructions for Conversion Logic and Testing
 
